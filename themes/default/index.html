@@ -2,103 +2,69 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-sm-6">
+	  <img
+		class="app-icon"
+		style="min-width: 400px;margin-left: auto;margin-right: auto;"
+		height="auto"				
+		src="images/BI.png"
+	  />
+	</div>
+	
+	<div class="row">
+	  {% if site.marketing_header %}
+	  <h2 class="marketing-header">{{ site.marketing_header }}</h2>
+	  {% endif %}
+	  
+	  <p class="marketing-desc">{{ site.marketing_desc }}</p>
+	  
+	  <div class="download-buttons">
+		
+		{% if site.app.ios_id %}
+		<a
+		  class="download-btn btn btn-lg"
+		  href="https://itunes.apple.com/app/id{{ site.app.ios_id }}?mt=8">
+		  <i class="fa fa-apple fa-lg" aria-hidden="true"></i> App Store
+		</a>
+		{% endif %}
 
-        <!-- Marketing -->
-        <div class="marketing">
-          <div class="app-meta">
-            {% if site.enable.app_icon %}
-              <img
-                class="app-icon"
-                style="min-width: 92px;"
-                height="auto"
-                {% if site.app.icon %} src="{{ site.app.icon }}"{% endif %}
-              />
-            {% endif %}
-            <span class="app-name">{{ site.app.name }}</span>
-          </div>
+		{% if site.app.android_id %}
+		<a
+		  class="download-btn btn btn-lg"
+		  href="https://play.google.com/store/apps/details?id={{ site.app.android_id }}">
+		  <i class="fa fa-android fa-lg" aria-hidden="true"></i> Google Play
+		</a>
+		{% endif %}
 
-          {% if site.marketing_header %}
-          <h2 class="marketing-header">{{ site.marketing_header }}</h2>
-          {% endif %}
-
-          <p class="marketing-desc">{{ site.marketing_desc }}</p>
-          <div class="download-buttons">
-            
-            {% if site.app.ios_id %}
-            <a
-              class="download-btn btn btn-lg"
-              href="https://itunes.apple.com/app/id{{ site.app.ios_id }}?mt=8">
-              <i class="fa fa-apple fa-lg" aria-hidden="true"></i> App Store
-            </a>
-            {% endif %}
-
-            {% if site.app.android_id %}
-            <a
-              class="download-btn btn btn-lg"
-              href="https://play.google.com/store/apps/details?id={{ site.app.android_id }}">
-              <i class="fa fa-android fa-lg" aria-hidden="true"></i> Google Play
-            </a>
-            {% endif %}
-
-            <div id="plusfriend-addfriend-button">
-              
-              <div class="panel-body">
-                <a id="channel-add-button" href="#" onclick="void addChannel();">
-                <img src="https://developers.kakao.com/assets/img/about/logos/channel/friendadd_small_yellow_rect_3X.png"/>
-                </a>
-                </div>
-                </div>
-                <script type='text/javascript'>
-                  //<![CDATA[
-                    // Set JavaScript Key of current app.
-                    Kakao.init('9154accfe3ce6f5934b561eb525333af');
-                    // Create KakaoStory share button.
-                    function addChannel() {
-                      Kakao.Channel.addChannel({
-                        channelPublicId: '_HxguXxb'
-                      });
-                    }
-                  //]]>
-                </script>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-sm-6">
-
-        <!-- App Preview or Screenshot(s) -->
-        <div class="device {{ site.device }}">
-          {% if site.app.video %}
-               <div class="video-container">
-                <iframe src="{{ site.app.video }}" height="426.66" width="240" allowfullscreen="" frameborder="0">
-                </iframe>
-              </div>
-
-          {% else %}
-
-          {% endif %}
-        </div>
-      </div>
+		<div id="plusfriend-addfriend-button">
+		  
+		  <div class="panel-body">
+			<a id="channel-add-button" href="#" onclick="void addChannel();">
+			<img src="https://developers.kakao.com/assets/img/about/logos/channel/friendadd_small_yellow_rect_3X.png"/>
+			</a>
+			</div>
+			</div>
+			<script type='text/javascript'>
+			  //<![CDATA[
+				// Set JavaScript Key of current app.
+				Kakao.init('9154accfe3ce6f5934b561eb525333af');
+				// Create KakaoStory share button.
+				function addChannel() {
+				  Kakao.Channel.addChannel({
+					channelPublicId: '_HxguXxb'
+				  });
+				}
+			  //]]>
+			</script>
+	      </div>
+       </div>
+	</div>
+	
+	<div class="row">
+		<center>
+		   <iframe width="560" height="315" src="{{ site.app.video }}?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</center>
     </div>
 
   </div>
 </div>
 
-<div class="social">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        {% include social.html %}
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="footer">
-  <div class="container">
-    <!-- footer text here -->
-  </div>
-</div>
