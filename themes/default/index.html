@@ -1,22 +1,21 @@
 <div class="main" role="main">
   <div class="container">
-
+	<br>
     <div class="row">
 	  <img
-		class="app-icon"
-		style="min-width: 400px;margin-left: auto;margin-right: auto;"
-		height="auto"				
+		style="max-width:70%; margin-left: auto;margin-right: auto;"
 		src="images/BI.png"
 	  />
 	</div>
-	
+	<br><br><br>
 	<div class="row">
-	  {% if site.marketing_header %}
-	  <h2 class="marketing-header">{{ site.marketing_header }}</h2>
-	  {% endif %}
-	  
-	  <p class="marketing-desc">{{ site.marketing_desc }}</p>
-	  
+			{% if site.marketing_header %}
+	  <p style="color:#01aefb;font-size:min(5vw, 36px);padding-bottom:10px;">{{ site.marketing_header }}</p>
+			{% endif %}
+
+	  <p style="font-size:min(3.5vw, 26px)">{{ site.marketing_desc }}</p>
+	  <p style="font-size:min(3.5vw, 26px)">{{ site.marketing_desc2 }}</p>
+	  <br>
 	  <div class="download-buttons">
 		
 		{% if site.app.ios_id %}
@@ -39,7 +38,7 @@
 		  
 		  <div class="panel-body">
 			<a id="channel-add-button" href="#" onclick="void addChannel();">
-			<img src="https://developers.kakao.com/assets/img/about/logos/channel/friendadd_small_yellow_rect_3X.png"/>
+			<img width=180 src="https://developers.kakao.com/assets/img/about/logos/channel/friendadd_small_yellow_rect_3X.png"/>
 			</a>
 			</div>
 			</div>
@@ -60,9 +59,14 @@
 	</div>
 	
 	<div class="row">
-		<center>
-		   <iframe width="560" height="315" src="{{ site.app.video }}?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</center>
+	 <div class="col-sm-3"></div>
+	 <div class="col-sm-6">
+		<div class="video-container">
+			<iframe
+				src="{{ site.app.video }}?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+			</iframe>
+		</div>	
+	  <div class="col-sm-3"></div>
     </div>
 
   </div>

@@ -43,10 +43,9 @@ app:
 # Marketing
 #
 marketing_header: 2020 한국 프로야구의 혁명 # Optional
-marketing_desc: 
- <br>
- 스포츠게임의 명가 9M Interactive의 최신 야구게임 <br>
- 2020년 상반기 중 출시!
+marketing_desc: 스포츠게임의 명가 9M Interactive의 최신 야구게임
+marketing_desc2: 2020년 상반기 중 출시!
+ 
 #
 # Social Links
 #
@@ -82,7 +81,7 @@ enable:
 #
 # Theme Settings
 #
-background_color: "#989898" # Optional
+background_color:  # Optional
 background_image: images/BG.jpg # Optional - Use Relative path e.g. images/backgrounds/image.jpg
 text_color: white # Optional
 link_color: # Optional

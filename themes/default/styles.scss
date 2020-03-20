@@ -18,7 +18,7 @@ body {
   {% endif %}
 
   {% if site.background_image %}
-  background: linear-gradient(rgba(59, 61, 64, 0.5), rgba(59, 61, 64, 0.5)), url(../../{{ site.background_image }}) no-repeat center center;
+  background: url(../../{{ site.background_image }}) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -90,7 +90,6 @@ a:hover {
 
 .marketing-desc {
   margin: 0 auto 20px;
-  max-width: 450px;
   white-space: pre-wrap;
   font-weight: 500;
 }
@@ -131,6 +130,23 @@ a:hover {
   {% if site.download_button_text_color %}
   color: {{ site.download_button_text_color }};
   {% endif %}
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+}
+
+.outer {
+  max-width: 90%;
+  align:center;
+}
+.inner {
+  max-width: 600px;
+}
+
+.video-container iframe {
+	position: relative;
 }
 
 //
