@@ -15,59 +15,75 @@
 
 	  <p style="font-size:min(3.5vw, 26px)">{{ site.marketing_desc }}</p>
 	  <p style="font-size:min(3.5vw, 26px)">{{ site.marketing_desc2 }}</p>
-	  <br>
-	  <div class="download-buttons">
-		
-		{% if site.app.ios_id %}
-		<a
-		  class="download-btn btn btn-lg"
-		  href="https://itunes.apple.com/app/id{{ site.app.ios_id }}?mt=8">
-		  <i class="fa fa-apple fa-lg" aria-hidden="true"></i> App Store
-		</a>
-		{% endif %}
-
-		{% if site.app.android_id %}
-		<a
-		  class="download-btn btn btn-lg"
-		  href="https://play.google.com/store/apps/details?id={{ site.app.android_id }}">
-		  <i class="fa fa-android fa-lg" aria-hidden="true"></i> Google Play
-		</a>
-		{% endif %}
-
-		<div id="plusfriend-addfriend-button">
-		  
-		  <div class="panel-body">
-			<a id="channel-add-button" href="#" onclick="void addChannel();">
-			<img width=180 src="https://developers.kakao.com/assets/img/about/logos/channel/friendadd_small_yellow_rect_3X.png"/>
-			</a>
-			</div>
-			</div>
-			<script type='text/javascript'>
-			  //<![CDATA[
-				// Set JavaScript Key of current app.
-				Kakao.init('9154accfe3ce6f5934b561eb525333af');
-				// Create KakaoStory share button.
-				function addChannel() {
-				  Kakao.Channel.addChannel({
-					channelPublicId: '_HxguXxb'
-				  });
-				}
-			  //]]>
-			</script>
-	      </div>
-       </div>
+	  	<center>
+			<table>
+				<tr>
+					{% if site.app.ios_id %}
+					<td>
+						<a
+						class="download-btn btn btn-lg"
+						href="https://itunes.apple.com/app/id{{ site.app.ios_id }}?mt=8">
+						<i class="fa fa-apple fa-lg" aria-hidden="true"></i> App Store
+						</a>
+					</td>
+					{% endif %}				
+					<td>
+						<a href="https://play.google.com/store/apps/details?id={{ site.app.android_id }}">
+						<img width=230 src="images/gg-pre.png"/>	
+						</a>			  
+					</td>
+					<td>
+						<div id="plusfriend-addfriend-button">
+			
+							<div class="panel-body">
+								<a id="channel-add-button" href="#" onclick="void addChannel();">
+								<img width=170 src="https://developers.kakao.com/assets/img/about/logos/channel/friendadd_small_yellow_rect_3X.png"/>
+								</a>
+							</div>
+						</div>
+						<script type='text/javascript'>
+							//<![CDATA[
+							// Set JavaScript Key of current app.
+							Kakao.init('9154accfe3ce6f5934b561eb525333af');
+							// Create KakaoStory share button.
+							function addChannel() {
+								Kakao.Channel.addChannel({
+								channelPublicId: '_HxguXxb'
+								});
+							}
+							//]]>
+						</script>
+					</td>
+				</tr>
+			</table>
+		</center>
+		<p style="font-size:min(2.5vw, 16px)">{{ site.marketing_desc3 }}</p>
 	</div>
-	
+	<br>
+
 	<div class="row">
 	 <div class="col-sm-3"></div>
 	 <div class="col-sm-6">
 		<div class="video-container">
 			<iframe
-				src="{{ site.app.video }}?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+				src="{{ site.app.video1 }}?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 			</iframe>
 		</div>	
+	  </div>
 	  <div class="col-sm-3"></div>
     </div>
+	<br><br>
+	<div class="row">
+	  	<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+		   <div class="video-container">
+			   <iframe
+				   src="{{ site.app.video2 }}?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+			   </iframe>
+		   </div>	
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
 
   </div>
 </div>
