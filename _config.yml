@@ -27,8 +27,8 @@ app:
   # e.g. images/app-screen-640x1136.png
   # 640x1136px
 
-  video1: https://www.youtube.com/embed/LmNpHdcnIEw
-  video2: https://www.youtube.com/embed/gOam54RU090 
+  video1: https://www.youtube.com/embed/U13wt6mao8E
+  video2: https://www.youtube.com/embed/LmNpHdcnIEw
   video3: https://www.youtube.com/embed/gOam54RU090
 
   # To update use path relative to project root with no leading slash:
