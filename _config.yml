@@ -9,7 +9,7 @@
 #
 app:
   name: 나인엠 프로야구 # REQUIRED - Enter your app name
-  ios_id:  # REQUIRED - 10 Digit Numeric App ID (lookup in iTunes Connect)
+  ios_id: 1509651690 # REQUIRED - 10 Digit Numeric App ID (lookup in iTunes Connect)
   android_id: com.ninemgames.nine # Optional - Enter Android app id like: com.example.app
 
   icon: images/icon.png # Leave blank to auto-magically populate
@@ -47,7 +47,7 @@ app:
 #
 marketing_header: 2020 한국 프로야구의 혁명 # Optional
 marketing_desc: 스포츠게임의 명가 9M Interactive의 최신 야구게임
-marketing_desc2: 구글플레이 사전등록 시작! 
+marketing_desc2: 구글플레이 / 애플앱스토어 사전등록 시작! 
 marketing_desc3: 
  
 #
