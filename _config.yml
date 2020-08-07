@@ -30,6 +30,7 @@ app:
   video1: https://www.youtube.com/embed/U13wt6mao8E
   video2: https://www.youtube.com/embed/LmNpHdcnIEw
   video3: https://www.youtube.com/embed/gOam54RU090
+  video4: https://www.youtube.com/embed/uzN8sL4MlRk
 
   # To update use path relative to project root with no leading slash:
   # e.g. images/app-preview.mp4
@@ -47,7 +48,7 @@ app:
 #
 marketing_header: 2020 한국 프로야구의 혁명 # Optional
 marketing_desc: 스포츠게임의 명가 9M Interactive의 최신 야구게임
-marketing_desc2: 구글플레이 / 애플앱스토어 사전등록 시작! 
+marketing_desc2: 2020.8.15 GRAND OPEN!!
 marketing_desc3: 
  
 #
